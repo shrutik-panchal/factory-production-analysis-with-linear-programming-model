@@ -32,17 +32,30 @@ Production cost: 5 (Xc1 + Xw1 + Xs1) + 4 (Xc2 + Xw2 + Xs2) + 5 (Xc3 + Xw3 + Xs3)
 Net/Max Profit: Revenue – Purchase Cost – Production Cost ➔ Max Function: 25Xc1 + 10Xw1 + 5Xs1 + 21Xc2 + 6Xw2 + Xs2 + 25Xc3 + 10Xw3 + 5Xs3)
 
 Constraint:
+
 1. Demands:
+
     a. Spring: Xc1 + Xw1 + Xs1 <= 4500
+
     b. Autumn: Xc2 + Xw2 + Xs2 <= 4500
+
     c. Winter: Xc3 + Xw3 + Xs3 <= 4500
 
 2. Materials:
+
     a. Cotton:
+
         i. Spring: Xc1 / (Xc1 + Xw1 + Xs1) >= 50% → Xc1 - Xw1 - Xs1 >= 0
+
         ii. Autumn: Xc2 / (Xc2 + Xw2 + Xs2) >= 60% → 2Xc2 - 3Xw2 - 3Xs2 >= 0
+
         iii. Winter: Xc3 / (Xc3 + Xw3 + Xs3) >= 40% → 3Xc3 - 2Xw3 - 2Xs3 >= 0
+
     b. Wool:
+
         i. Spring: Xw1 / (Xc1 + Xw1 + Xs1) >= 30% → -3Xc1 + 7Xw1 - 3Xs1 >= 0
+
         ii. Autumn: Xw2 / (Xc2 + Xw2 + Xs2) >= 40% → -2Xc2 + 3Xw2 - 2Xs2 >= 0
+
         iii. Winter: Xw3 / (Xc3 + Xw3 + Xs3) >= 50% → -Xc3 + Xw3 - Xs3 >= 0
+
