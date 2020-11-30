@@ -12,7 +12,7 @@ tion in each product is as follows:
 
 This study focuses on following two scenarios:
 - Formulate an LP model for the factory that maximises the profit, while satisfying the demand and the cotton and wool proportion constraints.
-- Solve the model using R/R Studio. Find the optimal profit and optimal values of the decision variables.
+- Creation of LP model using R/R Studio. Find the optimal profit and optimal values of the decision variables.
 
 
 ## Linear Programming Model:
@@ -58,4 +58,10 @@ Constraint:
         ii. Autumn: Xw2 / (Xc2 + Xw2 + Xs2) >= 40% → -2Xc2 + 3Xw2 - 2Xs2 >= 0
 
         iii. Winter: Xw3 / (Xc3 + Xw3 + Xs3) >= 50% → -Xc3 + Xw3 - Xs3 >= 0
+
+## Optimal Profit and Values for Decision Variables:
+
+Using the shared [R Code](/Program.R), the following values/outputs were achieved:
+
+![Graph-3](/Images/Img3.png)
 
