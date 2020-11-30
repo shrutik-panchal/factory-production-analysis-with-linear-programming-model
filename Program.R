@@ -1,14 +1,14 @@
 # -----------------------------------------------------------------------------------
-# ---------- Question - 2
 # -----------------------------------------------------------------------------------
-
 library(lpSolveAPI) # Including the required library 
+# -----------------------------------------------------------------------------------
 
 ProductionModel <- make.lp(0,9) # creating model with size 9
 
 lp.control(ProductionModel, sense = "maximize") # with Maximize
 
 set.objfn(ProductionModel, c(25, 10, 5, 21, 6, 1, 25, 10, 5)) # Adding Function Constants
+# -----------------------------------------------------------------------------------
 
 # Demand Constraint: Spring
 add.constraint(ProductionModel, c(1, 1, 1, 0, 0, 0, 0, 0, 0), "<=", 4500) # Adding contraints constants
@@ -36,6 +36,7 @@ add.constraint(ProductionModel, c(0, 0, 0, -2, 3, -2, 0, 0, 0), ">=", 0) # Addin
 
 # Material Constraint: Winter Wool
 add.constraint(ProductionModel, c(0, 0, 0, 0, 0, 0, -1, 1, -1), ">=", 0) # Adding contraints constants
+# -----------------------------------------------------------------------------------
 
 # Providing Constraints names to Rows
 RowNames <- c("Demand Constraint: Spring", "Demand Constraint: Autumn", "Demand Constraint: Winter",
@@ -48,6 +49,7 @@ RowNames <- c("Demand Constraint: Spring", "Demand Constraint: Autumn", "Demand 
 ColNames <- c("Spring:Cotton", "Spring:Wool", "Spring:Silk",
               "Autumn:Cotton", "Autumn:Wool", "Autumn:Silk",
               "Winter:Cotton", "Winter:Wool", "Winter:Silk")
+# -----------------------------------------------------------------------------------
 
 # Applying the dimension names to Model
 dimnames(ProductionModel) <- list(RowNames, ColNames)
@@ -62,4 +64,5 @@ get.constraints(ProductionModel)
 
 ProductionModel
 
+# -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------
